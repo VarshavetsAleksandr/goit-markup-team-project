@@ -1,0 +1,1883 @@
+:root {
+
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+
+    /**
+    |============================
+    | Colors
+    |============================
+*/
+    --color-iris: #4d5ae5;
+    --color-ocean: #404bbf;
+    --color-navy-blue: #2e2f42;
+    --color-green: #31d0aa;
+    --color-slate: #434455;
+    --color-light-slate: #8e8f99;
+    --color-cornflower: #e7e9fc;
+    --color-cloud: #f4f4fd;
+    --color-navy-blue-modal: rgba(46, 47, 66, 0.4);
+    --color-grey: #2e2f42;
+    --color-light: #ffffff;
+    --color-dairy: #fcfcfc;
+    --color-cornflowers: rgba(231, 233, 252, 0.1);
+
+    /**
+  |============================
+  | Fonts
+  |============================
+*/
+    --primary-font: "Roboto", sans-serif;
+    --secondary-font: "Raleway", sans-serif;
+
+    /**
+  |============================
+  | Constant
+  |============================
+*/
+    --indent: 24px;
+    --item: 1;
+    --anim-medium: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/**
+  |============================
+  | RESET AND NORMALIZE STYLES
+  |============================
+*/
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+svg {
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+  |============================
+  | BODY STYLES
+  |============================
+*/
+
+body {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    font-family: var(--primary-font);
+    background-color: var(--color-light);
+    color: var(--color-slate);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+/**
+  |============================
+  | BASE STYLES
+  |============================
+*/
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.subtitle {
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--color-navy-blue);
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.container {
+    min-width: 320px;
+    max-width: 428px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding: 0 15px;
+    }
+}
+
+.section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+@media only screen and (min-width: 1158px) {
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+/**
+  |============================
+  | HEADER SECTION
+  |============================
+*/
+.header {
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--color-cornflower);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-iris);
+    margin-right: 120px;
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+@media only screen and (min-width: 1158px) {
+    .nav-logo {
+        margin-right: 76px;
+    }
+}
+
+.nav-logo-desc {
+    color: var(--color-navy-blue);
+}
+
+.nav-list {
+    display: none;
+    gap: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    .nav-list {
+        display: flex;
+    }
+}
+
+.nav-list-item {}
+
+.nav-list-item-link {
+    color: var(--color-navy-blue);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    position: relative;
+    transition: color var(--anim-medium);
+}
+
+.nav-list-item-link.active {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    color: var(--color-ocean);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.nav-list-item-link:hover,
+.nav-list-item-link:focus {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    color: var(--color-ocean);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.nav-list-item-link::after {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    display: block;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.nav-list-item-link.active::after {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    background-color: var(--color-ocean);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.address {
+    display: none;
+    font-style: normal;
+}
+
+@media only screen and (min-width: 768px) {
+    .address {
+        display: block;
+    }
+}
+
+.address-list {
+    display: flex;
+    column-gap: 40px;
+    row-gap: 12px;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 1158px) {
+    .address-list {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.address-list-item {}
+
+.address-list-item-link {
+    color: var(--color-slate);
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    padding: 0;
+    transition: color var(--anim-medium);
+}
+
+@media only screen and (min-width: 1158px) {
+    .address-list-item-link {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
+
+.address-list-item-link:hover,
+.address-list-item-link:focus {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    color: var(--color-ocean);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.burger-btn {}
+
+/**
+  |============================
+  | HERO SECTION
+  |============================
+*/
+
+.hero-section {
+    max-width: 1440px;
+    background-color: var(--color-navy-blue);
+    padding-top: 112px;
+    padding-bottom: 112px;
+    max-width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+        url(../images/hero/hero-background_mob@1x.jpg);
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/hero/hero-background_mob@2x.jpg);
+    }
+}
+
+@media only screen and (min-width: 429px) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/hero/hero-background_tab@1x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero-section {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/hero/hero-background_tab@2x.jpg);
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/hero/hero-background_deck@1x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero-section {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/hero/hero-background_deck@2x.jpg);
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-section {
+        max-width: 768px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .hero-section {
+        padding-top: 188px;
+        padding-bottom: 188px;
+        max-width: 1440px;
+    }
+}
+
+.hero-container {}
+
+.hero-section-title {
+    color: var(--color-light);
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    max-width: 320px;
+    margin-bottom: 72px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-section-title {
+        font-size: 56px;
+        line-height: 1.07;
+        max-width: 496px;
+        margin-bottom: 36px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .hero-section-title {
+        margin-bottom: 48px;
+    }
+}
+
+.hero-section-btn {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--color-light);
+    background-color: var(--color-iris);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: block;
+    margin: 0 auto;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    transition: background-color var(--anim-medium);
+}
+
+.hero-section-btn:hover,
+.hero-section-btn:focus {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    background-color: var(--color-ocean);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+/**
+  |============================
+  | FEATURE SECTION
+  |============================
+*/
+
+.feature {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+@media only screen and (min-width: 1158px) {
+    .feature {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+}
+
+.feature-wrapper {
+    display: none;
+}
+
+@media only screen and (min-width: 1158px) {
+    .feature-wrapper {
+        background: var(--color-cloud);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 112px;
+        margin-bottom: 8px;
+        border-radius: 4px;
+    }
+}
+
+.feature-icon {}
+
+.feature-list-item {
+    --item: 1;
+    flex-basis: calc((100% - var(--indent) * (var(--item) - 1)) / var(--item));
+
+}
+
+@media only screen and (min-width: 768px) {
+    .feature-list-item {
+        --item: 2;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .feature-list-item {
+        --item: 4;
+    }
+}
+
+.feature-list-item-subtitle {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .feature-list-item-subtitle {
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .feature-list-item-subtitle {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+}
+
+.feature-list-item-desc {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+@media only screen and (min-width: 1158px) {
+    .feature-list-item-desc {
+        font-weight: 400;
+    }
+}
+
+/**
+|============================
+| WORKS SECTION
+|============================
+*/
+
+.works {
+    display: none;
+}
+
+@media only screen and (min-width: 1158px) {
+    .works {
+        display: block;
+        padding-bottom: 120px;
+    }
+}
+
+.works-title {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--color-navy-blue);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    margin-bottom: 72px;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.works-list {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    display: flex;
+    gap: 24px;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.works-list-item {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    --item: 3;
+    width: calc((100% - var(--indent) * (var(--item) - 1)) / var(--item));
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.works-list-img {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+/**
+  |============================
+  | TEAM SECTION
+  |============================
+*/
+
+.team {
+    background-color: var(--color-cloud);
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+@media only screen and (min-width: 1158px) {
+    .team {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+.team-container {
+    min-width: 294px;
+    max-width: 294px;
+}
+
+@media only screen and (min-width: 768px) {
+    .team-container {
+        max-width: 582px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .team-container {
+        max-width: 1158px;
+    }
+}
+
+.team-title {
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--color-navy-blue);
+    margin-bottom: 72px;
+}
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+}
+
+@media only screen and (min-width: 768px) {
+    .team-list {
+        row-gap: 64px;
+    }
+}
+
+.team-list-item {
+    background-color: var(--color-light);
+    background: #FFFFFF;
+    --item: 1;
+    width: calc((100% - var(--indent) * (var(--item) - 1)) / var(--item));
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+}
+
+@media only screen and (min-width: 768px) {
+    .team-list-item {
+        --item: 2;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .team-list-item {
+        --item: 4;
+    }
+}
+
+.team-list-img {}
+
+.team-card-text-content {
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.team-list-subtitle {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.team-list-desc {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    margin-bottom: 8px;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+/* Social icon */
+.socials-list {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.socials-list-item {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.socials-link {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    background-color: var(--color-iris);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    border-radius: 50%;
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    transition: background-color var(--anim-medium);
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+
+}
+
+.socials-link:hover,
+.socials-link:focus {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    background-color: var(--color-ocean);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.socials-icon {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    fill: var(--color-cloud);
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+
+/**
+  |============================
+  | Customer section
+  |============================
+*/
+.customers {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+@media only screen and (min-width: 1158px) {
+    .customers {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+.customers-container {}
+
+@media only screen and (min-width: 768px) {
+    .customers-container {
+        max-width: 584px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .customers-container {
+        max-width: 1158px;
+    }
+}
+
+
+.customer-title {
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--color-navy-blue);
+    margin-bottom: 72px;
+}
+
+.customers-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 16px;
+    row-gap: 72px;
+}
+
+@media only screen and (min-width: 768px) {
+    .customers-list {
+        column-gap: 24px;
+    }
+}
+
+.customers-list-item {
+    --item: 2;
+    --indent: 16px;
+    width: calc((100% - (var(--indent) * (var(--item) - 1)))/var(--item));
+    height: 88px;
+}
+
+@media only screen and (min-width: 768px) {
+    .customers-list-item {
+        --item: 3;
+        --indent: 24px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .customers-list-item {
+        --item: 6;
+    }
+}
+
+.customers-link {
+    color: var(--color-light-slate);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-light-slate);
+    border-color: var(--color-light-slate);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers-link:hover,
+.customers-link:focus {
+    color: var(--color-ocean);
+    border: 1px solid transparent;
+    border-color: var(--color-ocean);
+    border-radius: 4px;
+}
+
+.customer-icon {
+    fill: currentColor;
+}
+
+
+/**
+  |============================
+  | FOOTER SECTION
+  |============================
+*/
+
+.footer {
+    background-color: var(--color-navy-blue);
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+@media only screen and (min-width: 1158px) {
+    .footer {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    row-gap: 72px;
+    column-gap: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-container {
+        max-width: 584px;
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .footer-container {
+        max-width: 1158px;
+        row-gap: 0;
+        column-gap: 0;
+    }
+}
+
+.footer-wrapper {
+    margin: 0;
+    max-width: 268px;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-wrapper {
+        max-width: 264px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .footer-wrapper {
+        margin-right: 120px;
+    }
+}
+
+
+.footer-link {
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-iris);
+    display: block;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-link {
+        text-align: left;
+
+    }
+}
+
+.footer-desc {
+    color: var(--color-cloud);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    max-width: 264px;
+}
+
+@media only screen and (min-width: 1158px) {
+    .footer-desc {
+        max-width: 268px;
+    }
+}
+
+.footer-link-desc {
+    color: var(--color-cloud);
+}
+
+.footer-social {
+    margin: 0;
+}
+
+@media only screen and (min-width: 1158px) {
+    .footer-social {
+        margin-right: 80px;
+    }
+}
+
+
+.footer-socials-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-social-desc {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-light);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-social-desc {
+        text-align: left;
+    }
+}
+
+.footer-socials-list-item {}
+
+.footer-socials-link {
+    background-color: var(--color-iris);
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color var(--anim-medium);
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+    background-color: var(--color-green);
+}
+
+.footer-socials-icon {
+    fill: var(--color-cloud);
+}
+
+/* Footer forms */
+.footer-form-wrapper {
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-form-wrapper {
+        margin-left: 0;
+    }
+}
+
+.footer-form-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-light);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-form-title {
+        text-align: left;
+    }
+}
+
+.footer-form {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-form {
+        column-gap: 24px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+
+.footer-form-field {
+    max-width: 398px;
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-form-field {
+        width: 264px;
+    }
+}
+
+.footer-form-input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid var(--color-light);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: transparent;
+    color: var(--color-light);
+    padding: 0;
+    padding-left: 16px;
+}
+
+.footer-form-tag {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: var(--color-light);
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    transform-origin: left center;
+    transition: transform var(--anim-medium);
+    background-color: var(--color-navy-blue);
+    padding: 0;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.footer-form-input:focus+.footer-form-tag,
+.footer-form-input:not(:placeholder-shown)+.footer-form-tag {
+    transform: translateY(-134%);
+}
+
+.footer-form-btn {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    width: 165px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--color-light);
+    background-color: var(--color-iris);
+    border-radius: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border: none;
+    transition: background-color var(--anim-medium);
+}
+
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+    background-color: var(--color-ocean);
+}
+
+.footer-form-btn-icon {
+    fill: var(--color-light);
+}
+
+
+/**
+  |============================
+  | PORTFOLIO.HTML
+  |============================
+*/
+
+.portfolio-section {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    padding-top: 96px;
+    padding-bottom: 120px;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.filter {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.filter-list {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 72px;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.filter-list-item {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.filter-list-item-btn {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    background-color: var(--color-cloud);
+    color: var(--color-iris);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    border: 1px solid var(--color-cornflower);
+    border-radius: 4px;
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    transition: color var(--anim-medium),
+        background-color var(--anim-medium),
+        border-color var(--anim-medium),
+        box-shadow var(--anim-medium);
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.filter-list-item-btn:hover,
+.filter-list-item-btn:focus {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    color: var(--color-light);
+    background-color: var(--color-ocean);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    border: 1px solid transparent;
+    border-color: var(--color-ocean);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 2px 1px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.card-list {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.card-list-item {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    width: calc((100% - var(--indent) * (var(--item) - 1)) / var(--item));
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+
+.card-list-item-link {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    display: block;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    transition: box-shadow var(--anim-medium);
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.card-list-item-link:hover,
+.card-list-item-link:focus {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+/* OVERLAY */
+
+.card-thumb {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    position: relative;
+    overflow: hidden;
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.overlay-text {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    color: var(--color-cloud);
+    background-color: var(--color-iris);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    padding: 40px 32px;
+    width: 100%;
+    height: 100%;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    position: absolute;
+    top: 0;
+    transform: translateY(100%);
+    transition: transform var(--anim-medium);
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.card-list-item-link:hover .overlay-text,
+.card-list-item-link:focus .overlay-text {
+    transform: translateY(0%);
+}
+
+.portfolio-card-content {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    padding: 32px 16px;
+    border: 1px solid var(--color-cornflower);
+    border-top: none;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.card-list-img {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.card-subtitle {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--color-navy-blue);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    margin-bottom: 8px;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+    /* font setting */
+}
+
+.card-desc {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-slate);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+
+/**
+  |============================
+  | MODAL WINDOW
+  |============================
+*/
+.backdrop {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    background-color: var(--color-navy-blue-modal);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    width: 100%;
+    height: 100%;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    opacity: 1;
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: opacity var(--anim-medium),
+        visibility var(--anim-medium);
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    background-color: var(--color-dairy);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    max-width: 408px;
+    width: 100%;
+    min-height: 576px;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--anim-medium);
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+    /* opacity var(--anim-medium), */
+    padding-top: 72px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.backdrop.is-hidden .modal {
+    opacity: 0;
+    transform: translateX(-50%) translateY(70%);
+}
+
+.modal-close-btn {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    background-color: var(--color-cornflower);
+    color: var(--color-navy-blue);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    transition: background-color var(--anim-medium), color var(--anim-medium), border-color var(--anim-medium);
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+    /* color var(--anim-medium) */
+
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    background-color: var(--color-ocean);
+    color: var(--color-cornflower);
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    border-color: transparent;
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.modal-close-icon {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    fill: currentColor;
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+/**
+  |============================
+  | Forms
+  |============================
+*/
+
+/* Modal form */
+
+.modal-form {}
+
+.modal-form-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+
+}
+
+.modal-form-field {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--color-light-slate);
+}
+
+.modal-form-wrapper {
+    position: relative;
+    margin-bottom: 8px;
+    max-width: 360px;
+    width: 100%;
+    height: 40px;
+}
+
+.modal-form-input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--color-navy-blue-modal);
+    border-radius: 4px;
+    padding: 0;
+    padding-left: 38px;
+    outline: none;
+    transition: border-color var(--anim-medium);
+
+}
+
+
+.modal-form-input:focus {
+    border-color: var(--color-iris);
+}
+
+.modal-form-input:not(:placeholder-shown):required:invalid {
+    border-color: lightcoral;
+}
+
+.modal-form-input:not(:placeholder-shown):required:valid {
+    border-color: lightgreen;
+}
+
+.modal-form-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: currentColor;
+    pointer-events: none;
+    transition: fill var(--anim-medium);
+}
+
+.modal-form-input:focus~.modal-form-icon {
+    fill: var(--color-iris);
+}
+
+.modal-form-input:not(:placeholder-shown):required:invalid+.modal-form-icon {
+    fill: lightcoral;
+}
+
+
+.modal-form-input:not(:placeholder-shown):required:valid+.modal-form-icon {
+    fill: lightgreen;
+}
+
+.modal-comment-area {
+    max-width: 360px;
+    width: 100%;
+    height: 120px;
+    border: 1px solid var(--color-navy-blue-modal);
+    border-radius: 4px;
+    resize: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    outline: none;
+    color: var(--color-navy-blue);
+    margin-bottom: 16px;
+}
+
+.modal-comment-area:focus {
+    border-color: var(--color-iris);
+}
+
+.modal-comment-area:not(:placeholder-shown) {
+    border-color: var(--color-iris);
+}
+
+.form-agreement {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+}
+
+.form-agreement-checkbox {
+    appearance: none;
+}
+
+.form-agreement-icons {}
+
+.unchecked {
+    opacity: 1;
+    transition: opasity var(--anim-medium);
+}
+
+.checked {
+    opacity: 0;
+    transition: opacity var(--anim-medium);
+}
+
+.form-agreement-checkbox:checked+.form-agreement-icons>.unchecked {
+    opacity: 0;
+}
+
+.form-agreement-checkbox:checked+.form-agreement-icons>.checked {
+    opacity: 1;
+}
+
+.form-agreement-text {
+    user-select: none;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--color-slate);
+    padding: 0;
+    padding-left: 8px;
+}
+
+.form-agreement-link {
+    color: var(--color-iris);
+}
+
+
+/**
+  |============================
+  | Mobile menu burger
+  |============================
+*/
+
+.menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-close-btn.menu-toggle {
+    background-color: var(--color-cornflowers);
+    border: 1px solid var(--color-navy-blue-modal);
+    min-height: 24px;
+    min-width: 24px;
+}
+
+.menu-close-icon {
+    fill: var(--color-grey);
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 35px;
+    background-color: var(--color-light);
+    z-index: 999;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    color: var(--color-navy-blue);
+}
+
+.mobile-menu {
+    padding: 0;
+    margin: 0;
+    margin-bottom: auto;
+    list-style: none;
+}
+
+.mobile-menu-items:nth-last-child(n+2) {
+    margin-bottom: 40px;
+}
+
+.mobile-menu-link {}
+
+.mobile-menu .link {
+    display: block;
+    padding: 0;
+    color: var(--color-navy-blue);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+}
+
+.mobile-menu .active {
+    color: var(--color-ocean);
+}
+
+.mobile-contacts {
+    margin-bottom: 48px;
+}
+
+.mobile-contacts-items:nth-last-child(2) {
+    margin-bottom: 40px;
+}
+
+.tel {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: var(--color-iris);
+}
+
+@media only screen and (min-width: 320px) {
+    .tel {
+        font-size: 24px;
+    }
+
+    @media only screen and (min-width: 428px) {
+        .tel {
+            font-size: 36px;
+        }
+    }
+}
+
+.email {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--color-slate);
+}
+
+.mobile-socials {
+    justify-content: flex-start;
+    gap: 56px;
+}
+
+@media only screen and (min-width: 320px) {
+    .mobile-socials {
+        gap: 26px;
+    }
+
+    @media only screen and (min-width: 428px) {
+        .mobile-socials {
+            gap: 56px;
+        }
+    }
+}
