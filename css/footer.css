@@ -85,7 +85,7 @@ a {
 
 @media only screen and (min-width: 1200px) {
     .container {
-        max-width: 1200px;
+        max-width: 1136px;
     }
 }
 
@@ -157,12 +157,14 @@ a {
 @media only screen and (min-width: 768px) {
     .footer-thumb {
         gap: 50px;
+        margin-bottom: 50px;
     }
 }
 
 @media only screen and (min-width: 1200px) {
     .footer-thumb {
         gap: 63px;
+        margin-bottom: 58px;
     }
 }
 
