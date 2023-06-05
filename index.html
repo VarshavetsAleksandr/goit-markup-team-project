@@ -29,7 +29,7 @@
     <button onclick="openModal(3)">Открыть окно 3</button>
 
     <!-- Модальные окна -->
-    <div id="modal1" class="modal">
+    <!-- <div id="modal1" class="modal">
       <div class="modal-content">
         <p>Это модальное окно 1.</p>
         <button onclick="closeModal(1)">
@@ -38,9 +38,9 @@
           </svg>
         </button>
       </div>
-    </div>
+    </div> -->
 
-    <div id="modal2" class="modal">
+    <!-- <div id="modal2" class="modal">
       <div class="modal-content">
         <p>Это модальное окно 2.</p>
         <button onclick="closeModal(2)">
@@ -49,9 +49,9 @@
           </svg>
         </button>
       </div>
-    </div>
+    </div> -->
 
-    <div id="modal3" class="modal">
+    <!-- <div id="modal3" class="modal">
       <div class="modal-content">
         <p>Это модальное окно 3.</p>
         <button onclick="closeModal(3)">
@@ -60,9 +60,100 @@
           </svg>
         </button>
       </div>
+    </div> -->
+
+    <div id="modal1" class="modal backdrope-explore is-hidden">
+      <div class="modal-explore">
+        <button onclick="closeModal(1)" class="modal-explore-close-btn" type="button">
+          <svg class="modal-explore-close-icon" width="24" height="24">
+            <use href="./images/icons.svg#x-close"></use>
+          </svg>
+        </button>
+        <div class="modal-explore-wrapper"></div>
+        <div class="modal-explore-input">
+          <h2 class="modal-explore-title">
+            Explore our <br />
+            <span class="modal-explore-name">new chocolate</span> first!
+          </h2>
+
+          <form class="modal-explore-form" name="pop_up_explore">
+            <label class="subscribe-form label-position">
+              <input
+                class="modal-subscribe-input"
+                type="email"
+                name="user_email"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                placeholder="Enter your email"
+                title="Формат має бути таким example@gmail.com"
+              />
+              <!-- <span class="modal-explore-email">Enter your email</span> -->
+            </label>
+            <button class="modal-explore-btn" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
 
-    <script src="./js/modal-gpt.js"></script>
+    <div id="modal2" class="modal reviews-backdrop is-hidden">
+      <div class="reviws-modal">
+        <button onclick="closeModal(2)" type="button" class="reviews-btn-close">
+          <svg class="reviews-icon-close">
+            <use href="./images/icons.svg#x-close"></use>
+          </svg>
+        </button>
+        <h2 class="modal-leave-review-header">
+          <span class="black-part-reviews">
+            LEAVE A REVIEW <br />
+            ABOUT</span
+          >
+          <span class="part-reviews-header">OUR CHOCOLATE</span>
+        </h2>
+        <form class="modal-leave-review">
+          <label class="modal-leave-review-field">
+            <input
+              type="text"
+              name="user_name"
+              class="modal-leave-review-input"
+              placeholder="Name"
+              pattern="[a-zA-Zа-яА-Я]+"
+              minlength="3"
+            />
+          </label>
+
+          <label class="modal-leave-review-field">
+            <input
+              type="email"
+              name="user_email"
+              class="modal-leave-review-input"
+              placeholder="Enter your email"
+            />
+          </label>
+          <label class="modal-leave-review-field modal-leave-review-field-svg">
+            <input
+              type="tel"
+              name="user_phone"
+              class="modal-leave-review-input modal-leave-review-input-phone"
+              placeholder="Phone number"
+            />
+            <svg class="modal-leave-review-icon">
+              <use class="modal-icon-ua" href="../img/icons.svg#flag-ua"></use>
+            </svg>
+            <span class="modal-leave-review-phone-code">+380</span>
+          </label>
+          <label class="modal-leave-review-field leave-review-comment">
+            <textarea
+              name="user_message"
+              class="modal-leave-review-input modal-leave-review-message"
+              placeholder="Enter text"
+            ></textarea>
+          </label>
+
+          <button class="reviews-send" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
     <script src="./js/modal-gpt-new.js"></script>
   </body>
 </html>
