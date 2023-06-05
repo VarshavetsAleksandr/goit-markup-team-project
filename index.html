@@ -23,140 +23,37 @@
     <link rel="stylesheet" href="./css/footer.css" />
   </head>
   <body>
-    <div class="backdrop is-hiden">
-      <div class="modal-new">
-        <button class="modal-new-close-btn">
-          <svg class="modal-new-close-icon" width="24" height="24">
-            <use href="./images/icons.svg#modal-close-icon"></use>
-          </svg>
-        </button>
-        <div class="modal-new-img-wrapper">
-          <!-- <picture>
-            
-            <source
-              media="(min-width: 768px)"
-              srcset="./images/modal/img1_desk@1x.webp 1x, ./images/modal/img1_desk@2x.webp 2x"
-              type="image/webp"
-            />
-            <source
-              media="(min-width: 1200px)"
-              srcset="./images/modal/img1_desk@1x.jpg 1x, ./images/modal/img1_desk@2x.jpg 2x"
-              type="image/jpg"
-            />
-            
-            <source
-              media="(max-width: 767px)"
-              srcset="./images/modal/img1_mob@1x.webp 1x, ./images/modal/img1_mob@2x.webp 2x"
-              type="image/webp"
-            />
-            <source
-              media="(max-width: 767px)"
-              srcset="./images/modal/img1_mob@1x.jpg 1x, ./images/modal/img1_mob@2x.jpg 2x"
-              type="image/jpg"
-            />
-            <img
-              class="modal-new-img"
-              src="./images/modal/img1_desk@1x.jpg"
-              alt=""
-              width="538"
-              height="196"
-            />
-          </picture> -->
-        </div>
-        <div class="modal-new-wrapper">
-          <h2 class="modal-new-title"
-            >Explore our <br />
-            <span class="modal-new-title-wrapper">new chocolate</span> first!
-          </h2>
-          <form class="modal-new-form" name="modal-new-form">
-            <input
-              class="modal-new-input"
-              type="email"
-              name="modal-new-email"
-              required
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              placeholder="Enter your email"
-              title="Формат має бути example@gmail.com"
-            />
-            <button class="modal-new-form-btn" type="submit">Submit</button>
-          </form>
-        </div>
+    <!-- Кнопки для открытия модальных окон -->
+    <button onclick="openModal(1)">Открыть окно 1</button>
+    <button onclick="openModal(2)">Открыть окно 2</button>
+    <button onclick="openModal(3)">Открыть окно 3</button>
+
+    <!-- Модальные окна -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal(1)">&times;</span>
+        <p>Это модальное окно 1.</p>
+        <button onclick="closeModal(1)">Закрыть окно 1</button>
       </div>
     </div>
 
-    <footer class="footer">
-      <div class="footer-container container">
-        <div class="footer-wrapper">
-          <h2 class="footer-title">
-            <span class="footer-title-wrapper">Chocolate</span> a delicious <br />
-            cure for a bad day
-          </h2>
-          <div class="footer-thumb">
-            <address class="footer-address">
-              <p class="footer-address-desc">Contact us</p>
-              <ul class="footer-address-list list">
-                <li class="footer-address-item">
-                  <a class="footer-address-link link" href="tel:+380684439426"
-                    >+380 (68) 443-94-26</a
-                  >
-                </li>
-                <li class="footer-address-item">
-                  <a class="footer-address-link link" href="mailto:simplychoc@gmail.com"
-                    >simplychoc@gmail.com
-                  </a>
-                </li>
-              </ul>
-            </address>
-            <ul class="footer-social-list list">
-              <li class="footer-social-item">
-                <a
-                  class="footer-social-link link"
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram icon"
-                >
-                  <svg class="footer-social-icon" width="24" height="24">
-                    <use href="./images/icons.svg#instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer-social-item">
-                <a
-                  class="footer-social-link link"
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Twitter icon"
-                >
-                  <svg class="footer-social-icon" width="24" height="24">
-                    <use href="./images/icons.svg#twitter"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-nav-wrapper">
-          <ul class="footer-nav-list list">
-            <li class="footer-nav-item">
-              <a class="footer-nav-link link" href="">Home</a>
-            </li>
-            <li class="footer-nav-item">
-              <a class="footer-nav-link link" href="">How it’s made?</a>
-            </li>
-            <li class="footer-nav-item">
-              <a class="footer-nav-link link" href="">Our products</a>
-            </li>
-            <li class="footer-nav-item">
-              <a class="footer-nav-link link" href="">Top sellers</a>
-            </li>
-            <li class="footer-nav-item">
-              <a class="footer-nav-link link" href="">Chocolate is loved</a>
-            </li>
-          </ul>
-        </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal(2)">&times;</span>
+        <p>Это модальное окно 2.</p>
+        <button onclick="closeModal(2)">Закрыть окно 2</button>
       </div>
-    </footer>
+    </div>
+
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal(3)">&times;</span>
+        <p>Это модальное окно 3.</p>
+        <button onclick="closeModal(3)">Закрыть окно 3</button>
+      </div>
+    </div>
+
+    <script src="./js/modal-gpt.js"></script>
+    <script src="./js/modal-gpt-new.js"></script>
   </body>
 </html>
