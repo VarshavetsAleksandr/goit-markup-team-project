@@ -499,3 +499,26 @@
         display: block;
     }
 }
+
+.skrollbar {
+    height: 3000px;
+    background-color: lightblue;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(94, 94, 94, .2);
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff9524c3;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #fd9222;
+}
